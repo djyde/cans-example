@@ -6,6 +6,7 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "antd": "^2.8.3",
     "cans": "^0.0.7",
     "cans-plugin-http": "^0.0.2",
     "react": "^15.4.2",

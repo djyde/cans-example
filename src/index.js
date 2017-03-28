@@ -2,7 +2,11 @@ import cans from 'cans'
 import React from 'react'
 import { BrowserRouter, Route } from 'cans/router'
 
+// cans plugins
 import httpPlugin from 'cans-plugin-http'
+
+// antd
+import 'antd/dist/antd.css'
 
 import Counter from './Counter'
 import { counterModel } from './Counter/model'

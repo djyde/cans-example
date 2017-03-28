@@ -1,17 +1,35 @@
 import React from 'react'
 import { inject } from 'cans'
 
+import {
+  Button,
+  Table
+} from 'antd'
+
+const columns = [
+  {
+    title: 'id',
+    dataIndex: 'id'
+  },
+  {
+    title: 'title',
+    dataIndex: 'title'
+  },
+  {
+    title: 'name' ,
+    dataIndex: 'name'
+  },
+  {
+    title: 'email',
+    dataIndex: 'email'
+  }
+]
+
 const CURD = inject(({ models }) => {
   return (
     <div>
-      {models.curd.posts.map(post => {
-        return (
-          <div key={post.id}>
-            <h4>{post.title}</h4>
-            <p>{post.body}</p>
-          </div>
-        )
-      })}
+      <Button loading={models.curd.isLoading} onClick={models.curd.fetch}>Fetch</Button>
+      <Table dataSource={models.curd.posts} columns={columns} />
     </div>
   )
 })
