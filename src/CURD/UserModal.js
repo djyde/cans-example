@@ -15,7 +15,7 @@ const UserFormModal = inject(({ models, form }) => {
       visible={models.modals.createUser.visible} 
       onCancel={models.modals.createUser.hide}
       onOk={models.curd.create}
-      confirmLoading={models.modals.confirmLoading}
+      confirmLoading={models.modals.createUser.confirmLoading}
     >
       <Form>
         <Form.Item label='title'>
